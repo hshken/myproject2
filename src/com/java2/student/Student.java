@@ -1,14 +1,19 @@
 package com.java2.student;
 
 public class Student {
-	String name;
-	int English;
+	protected String name;
+	private int english;
 	public Student(String name, int english) {
 		this.name=name;
-		this.English=english;
+		this.english=english;
 		}
 		public void print() {
-			System.out.println(name + "\t" + English);
+			System.out.println(name + "\t" + english);
 		
 	}
+		public void setEnglish(int english) {
+			if(english >= 0 && english<=100) {
+				this.english=english;
+			}
+		}
 }
